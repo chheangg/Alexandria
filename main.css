@@ -1,0 +1,204 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+}
+
+.container {
+    width: 70em;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 16px;
+    background-color: royalblue;
+    box-shadow: 0 2px gray;
+}
+
+.logo-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    padding-right: 16px;
+    color: white; 
+    margin: 0;
+    text-align: center;
+}
+
+header p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: snow;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+}
+/* end of Header */
+
+/* Upper content */
+.top-content {
+    display: flex;
+    align-items: center;
+    padding: 8px 0 12px 0;
+    border-bottom: 1px solid gray;
+}
+
+.create-form {
+    width: 150px;
+}
+.create-form button {
+    font-family: 'Roboto', sans-serif;
+    color: royalblue;
+    background-color: whitesmoke;
+    border: 0.5px solid gray;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+}
+/* end of top content */
+
+/* box container */
+
+.box-container {
+    display: flex;
+}
+
+.space {
+    width: 150px;
+}
+/*end of box container */
+
+/* form */
+.form-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    display: none;
+    align-items: center;
+}
+
+.form-container {
+    width: 40em;
+    height: 30em;
+    background: white;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.form-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    border: 0;
+    background: transparent;
+    height: 32px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.close img {
+    height: 32px;
+}
+
+legend {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+form {
+    width: 30em;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+form ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    border-top: 1px solid gray;
+    padding-top: 16px;
+    margin-top: 0;
+}
+
+form input, select, option  {
+    font-family: 'Roboto', sans-serif;
+    height: 32px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+form li label, form li a, .status {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+form li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.double-input {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.second-box input {
+    width: 250px;
+}
+
+.first-box select, .second-box input {
+    margin-top: 4px;    
+}
+
+.status-box {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.status-box input {
+    width: 16px;
+    height: 16px;
+}
+
+.submit {
+    display: block;
+    width: 150px;   
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    background-color: royalblue;
+    text-align: center;
+    border: 1px solid silver;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
