@@ -35,16 +35,16 @@
     <div class="form-overlay">
         <div class="form-container">
             <button class="close"><img src="./images/close.png"></button>
-            <form>
+            <form >
                 <legend>Book form | Alexandria</legend>
                 <ul>
                     <li>
                         <label for="name">Name</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" required>
                     </li>
                     <li>
                         <label for="author">Author</label>
-                        <input type="text" id="author">
+                        <input type="text" id="author" required>
                     </li>
                     <li>
                         <div class="double-input">
@@ -64,10 +64,10 @@
                         </div>
                     </li>
                     <li>
-                        <div class="status">Status</div>
+                        <div class="status-label">Status</div>
                         <div class="status-box">
-                            <input type="radio" name="status" value="true"><a>Read</a>
-                            <input type="radio" name="status" value="false"><a>Hasn't Read</a>
+                            <input type="radio" name="status" value="true" required><a>Read</a>
+                            <input type="radio" name="status" value="false" required><a>Not Read</a>
                         </div>
                     </li>
                 </ul>

@@ -149,7 +149,7 @@ form input, select, option  {
     font-weight: 300;
 }
 
-form li label, form li a, .status {
+form li label, form li a, .status-label {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -277,4 +277,15 @@ form li {
 
 .not-read{
     background-color: red !important;
+}
+
+.remove-content {
+    background: url('./images/remove.png') no-repeat;
+    border: none;
+    background-size: 24px;
+    height: 24px;
+    width: 26px;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
 }
