@@ -28,14 +28,19 @@ submit.addEventListener('click', () => {
     }
     runInput(bookName.value , bookAuthor.value, bookPage.value, bookGenre.value , status.value)
     form.style.cssText = "display: none;"
+    bookName.value = '';
+    bookAuthor.value = '';
+    bookPage.value = '';
+    bookGenre.value = '';
+    bookStatus.value = '';
 })
 
-function book(name, author, page, genre, read) {
+function book(name, author, page, genre, status) {
     this.name = name;
     this.author = author;
     this.page = page;
     this.genre = genre;
-    this.read = read;
+    this.status = status;
 }
 
 function addBookToLibrary(book) {
@@ -49,19 +54,36 @@ function displayBook(library) {
         let bookContainer = document.createElement('div');
         bookContainer.classList.add('book-container');
         for ( detail in book ) {
-            if ( book[detail] === true ) {
+            let bookAttribute = document.createElement('span');
+            let bookDetail = document.createElement('span');
+            let bookLabel = document.createElement('span');
+
+            if ( book[detail] === 'true' ) {
                 book[detail] = "Read";
-            } else if ( book[detail] === false ) {
+                bookLabel.setAttribute('class', 'read');
+            } else if ( book[detail] === 'false' ) {
                 book[detail] = "Not read";
+                bookLabel.setAttribute('class', 'not-read');
             } 
 
-            let bookDetail = document.createElement('div');
-            bookDetail.classList.add('book');
+            bookAttribute.classList.add(`${detail}`);
+
+            if (!(detail == 'name')) {
+                bookLabel.classList.add('book-label');
+                bookLabel.textContent = `${detail}`;
+                bookAttribute.appendChild(bookLabel);
+            }
+
+            bookDetail.classList.add('book-content');
             bookDetail.textContent = book[detail];
-            bookContainer.appendChild(bookDetail);
+            bookAttribute.appendChild(bookDetail);
+
+            bookContainer.appendChild(bookAttribute);
 
         }
         container.appendChild(bookContainer);
+
+    
 }
 
 function runInput(name, author, page, genre, read) {
