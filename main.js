@@ -78,18 +78,20 @@ function removeContent(button) {
     myLibrary.forEach((book) => {
         if ( book.id == button.target.getAttribute('data-key')) {
             container.removeChild(document.querySelector(`span[data-key="${book.id}"]`));
-            myLibrary.splice(myLibrary.indexOf(book), 1);
+            myLibrary.splice(myLibrary.indexOf(book), 1 );
         }
     })
 } 
 
-function book(name, author, page, genre, status, id) {
-    this.name = name;
-    this.author = author;
-    this.page = page;
-    this.genre = genre;
-    this.status = status;
-    this.id = id;
+class book {
+    constructor(name, author, page, genre, status, id) {
+        this.name = name;
+        this.author = author;
+        this.page = page;
+        this.genre = genre;
+        this.status = status;
+        this.id = id;
+    }
 }
 
 function addBookToLibrary(book) {
@@ -170,3 +172,14 @@ function runInput(name, author, page, genre, read) {
     removeBtn = document.querySelectorAll('.remove-content');
     statusBtn = document.querySelectorAll('.status');
 }
+
+function personFactory(name, age) {
+    const sayHello = () => console.log("Hi!");
+    return {
+        name,
+        age,
+        sayHello,
+    }
+}
+
+let pete = personFactory("Pete", 22)
